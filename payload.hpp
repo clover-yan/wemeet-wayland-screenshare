@@ -78,7 +78,7 @@ struct XdpScreencastPortal {
 
   XdpScreencastPortal() {
     portal = xdp_portal_new();
-    XdpOutputType output_type = (XdpOutputType)(XdpOutputType::XDP_OUTPUT_MONITOR | XdpOutputType::XDP_OUTPUT_WINDOW);
+    XdpOutputType output_type = (XdpOutputType)(XdpOutputType::XDP_OUTPUT_MONITOR | XdpOutputType::XDP_OUTPUT_WINDOW | XdpOutputType::XDP_OUTPUT_VIRTUAL);
     XdpScreencastFlags cast_flags = XdpScreencastFlags::XDP_SCREENCAST_FLAG_NONE;
     XdpCursorMode cursor_mode = get_current_session_type() == SessionType::Wayland ? 
                                 XDP_CURSOR_MODE_EMBEDDED :
